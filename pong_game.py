@@ -5,3 +5,6 @@
 #    4. Create class scoreboard and display score.
 #    5. Create vertical line on a middle of the screen.
 #    6. Create game end when ball move out of window.
+
+import turtle
+from turtle import Screen
