@@ -8,3 +8,11 @@
 
 import turtle
 from turtle import Screen
+
+screen = Screen()
+screen.setup(width=900, height=550)
+screen.bgcolor("black")
+screen.tracer(0)
+
+
+screen.exitonclick()
