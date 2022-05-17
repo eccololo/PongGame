@@ -22,8 +22,8 @@ player2 = Player(PLAYER_2_START_POSITION)
 
 game_is_on = True
 
-while game_is_on:
-    pass
+# while game_is_on:
+#     pass
 
 
 screen.exitonclick()
