@@ -5,7 +5,6 @@
 #    5. Create vertical line on a middle of the screen.
 #    6. Create game end when ball move out of window.
 
-import turtle
 from turtle import Screen
 from player import Player
 
@@ -14,10 +13,9 @@ screen.setup(width=900, height=550)
 screen.bgcolor("black")
 screen.tracer(0)
 
+right_player = Player()
+
 game_is_on = True
 
 while game_is_on:
     screen.update()
-
-
-screen.exitonclick()
