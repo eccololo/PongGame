@@ -13,7 +13,7 @@ screen.setup(width=900, height=550)
 screen.bgcolor("black")
 screen.tracer(0)
 
-right_player = Player()
+right_player = Player((390, 0))
 
 game_is_on = True
 
