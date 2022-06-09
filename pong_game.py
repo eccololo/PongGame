@@ -7,6 +7,7 @@
 
 from turtle import Screen
 from player import Player
+from ball import Ball
 
 screen = Screen()
 screen.setup(width=900, height=550)
@@ -15,6 +16,7 @@ screen.tracer(0)
 
 right_player = Player((390, 0))
 left_player = Player((-390, 0))
+ball = Ball()
 
 screen.listen()
 screen.onkey(right_player.right_player_move_up, "Up")
