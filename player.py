@@ -11,3 +11,9 @@ class Player(Turtle):
         self.penup()
         self.goto(position[0], position[1])
 
+    def right_player_move_up(self):
+        pass
+
+    def right_player_move_down(self):
+        pass
+
