@@ -31,3 +31,6 @@ while game_is_on:
     screen.update()
     sleep(ball.get_ball_speed())
     ball.move()
+
+    if ball.ycor() >= 260 or ball.ycor() <= -260:
+        ball.bounce_y()

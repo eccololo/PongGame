@@ -20,3 +20,6 @@ class Ball(Turtle):
     def get_ball_speed(self):
         return self.ball_speed
 
+    def bounce_y(self):
+        self.y_speed *= -1
+
