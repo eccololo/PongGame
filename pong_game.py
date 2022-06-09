@@ -1,6 +1,4 @@
 # TODO:
-#    1. Create class paddle or player and make it move and bounce a ball.
-#    2. Create class ball and make it move and bounce from walls and players.
 #    4. Create class scoreboard and display score.
 #    5. Create vertical line on a middle of the screen.
 #    6. Create game end when ball move out of window.
@@ -32,5 +30,11 @@ while game_is_on:
     sleep(ball.get_ball_speed())
     ball.move()
 
+    # Ball is boucing from top and bottom wall.
     if ball.ycor() >= 260 or ball.ycor() <= -260:
         ball.bounce_y()
+
+    # Ball is bouncing from left and right paddle.
+    if (ball.distance(right_player) <= 60 and ball.xcor() >= 365) or \
+            (ball.distance(left_player) <= 60 and ball.xcor() <= -365):
+        ball.bounce_x()
