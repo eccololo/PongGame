@@ -19,6 +19,8 @@ left_player = Player((-390, 0))
 screen.listen()
 screen.onkey(right_player.right_player_move_up, "Up")
 screen.onkey(right_player.right_player_move_down, "Down")
+screen.onkey(left_player.right_player_move_up, "w")
+screen.onkey(left_player.right_player_move_down, "s")
 
 game_is_on = True
 
