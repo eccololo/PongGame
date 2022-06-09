@@ -8,6 +8,7 @@
 from turtle import Screen
 from player import Player
 from ball import Ball
+from time import sleep
 
 screen = Screen()
 screen.setup(width=900, height=550)
@@ -28,3 +29,5 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
+    sleep(ball.get_ball_speed())
+    ball.move()
