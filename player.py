@@ -10,10 +10,11 @@ class Player(Turtle):
         self.shapesize(stretch_wid=6, stretch_len=1)
         self.penup()
         self.goto(position[0], position[1])
+        self.paddle_speed = 25
 
     def right_player_move_up(self):
-        pass
+        self.sety(self.ycor() + self.paddle_speed)
 
     def right_player_move_down(self):
-        pass
+        self.sety(self.ycor() - self.paddle_speed)
 
