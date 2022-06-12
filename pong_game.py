@@ -1,7 +1,9 @@
 # TODO:
-#    4. Create class scoreboard and display score.
-#    5. Create vertical line on a middle of the screen.
-#    6. Create game end when ball move out of window.
+#    1. Create class scoreboard and display score.
+#    2. Create random turtle that goes on random x in the middle of the screen
+#    from bottom to top.
+#    3. Create game end when ball move out of window.
+#    4. Create Computer AI that steer one of the paddles.
 
 from turtle import Screen
 from player import Player
