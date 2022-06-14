@@ -1,5 +1,4 @@
 # TODO:
-#    1. Create class scoreboard and display score.
 #    2. Create random turtle that goes on random x in the middle of the screen
 #    from bottom to top.
 #    3. Create game end when ball move out of window.
@@ -46,5 +45,9 @@ while game_is_on:
 
     # When ball is passing right or left wall its starts over again from middle of the screen and
     # with opposite direction.
-    if ball.xcor() <= -450 or ball.xcor() >= 450:
+    if ball.xcor() <= -450:
         ball.reset_ball()
+        scoreboard.r_score_point()
+    elif ball.xcor() >= 450:
+        ball.reset_ball()
+        scoreboard.l_score_point()
