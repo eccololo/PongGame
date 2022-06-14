@@ -41,3 +41,8 @@ while game_is_on:
             (ball.distance(left_player) <= 60 and ball.xcor() <= -365):
         ball.bounce_x()
         ball.increase_ball_speed()
+
+    # When ball is passing right or left wall its starts over again from middle of the screen and
+    # with opposite direction.
+    if ball.xcor() <= -450 or ball.xcor() >= 450:
+        ball.reset_ball()
