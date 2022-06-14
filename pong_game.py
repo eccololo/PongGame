@@ -40,3 +40,4 @@ while game_is_on:
     if (ball.distance(right_player) <= 60 and ball.xcor() >= 365) or \
             (ball.distance(left_player) <= 60 and ball.xcor() <= -365):
         ball.bounce_x()
+        ball.increase_ball_speed()
