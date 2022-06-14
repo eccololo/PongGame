@@ -1,14 +1,15 @@
 # TODO:
 #    2. Create random turtle that goes on random x in the middle of the screen
 #    from bottom to top.
-#    3. Create game end when ball move out of window.
 #    4. Create Computer AI that steer one of the paddles.
+#    5. Change player paddle color to different and AI paddle to differenc color.
 
 from turtle import Screen
 from player import Player
 from ball import Ball
 from time import sleep
 from scoreboard import Scoreboard
+from obstacle import Obstacle
 
 screen = Screen()
 screen.setup(width=900, height=550)
@@ -19,6 +20,7 @@ right_player = Player((390, 0))
 left_player = Player((-390, 0))
 ball = Ball()
 scoreboard = Scoreboard()
+obstacle = Obstacle()
 
 screen.listen()
 screen.onkey(right_player.right_player_move_up, "Up")
