@@ -1,8 +1,5 @@
 # TODO:
-#    2. Create random turtle that goes on random x in the middle of the screen
-#    from bottom to top.
-#    4. Create Computer AI that steer one of the paddles.
-#    5. Change player paddle color to different and AI paddle to differenc color.
+#    1. Make game end.
 
 from turtle import Screen
 from player import Player
@@ -16,8 +13,8 @@ screen.setup(width=900, height=550)
 screen.bgcolor("black")
 screen.tracer(0)
 
-right_player = Player((390, 0))
-left_player = Player((-390, 0))
+right_player = Player((390, 0), "blue")
+computer = Player((-390, 0), "green")
 ball = Ball()
 scoreboard = Scoreboard()
 obstacle = Obstacle()
@@ -25,8 +22,8 @@ obstacle = Obstacle()
 screen.listen()
 screen.onkey(right_player.right_player_move_up, "Up")
 screen.onkey(right_player.right_player_move_down, "Down")
-screen.onkey(left_player.right_player_move_up, "w")
-screen.onkey(left_player.right_player_move_down, "s")
+screen.onkey(computer.right_player_move_up, "w")
+screen.onkey(computer.right_player_move_down, "s")
 
 game_is_on = True
 
@@ -35,6 +32,7 @@ while game_is_on:
     sleep(ball.get_ball_speed())
     ball.move()
     obstacle.move()
+    computer.computer_follow_ball(ball)
 
     # Ball is boucing from top and bottom wall.
     if ball.ycor() >= 260 or ball.ycor() <= -260:
@@ -42,7 +40,7 @@ while game_is_on:
 
     # Ball is bouncing from left and right paddle.
     if (ball.distance(right_player) <= 60 and ball.xcor() >= 365) or \
-            (ball.distance(left_player) <= 60 and ball.xcor() <= -365):
+            (ball.distance(computer) <= 60 and ball.xcor() <= -365):
         ball.bounce_x()
         ball.increase_ball_speed()
 
