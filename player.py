@@ -12,13 +12,16 @@ class Player(Turtle):
         self.goto(position[0], position[1])
         self.paddle_speed = 25
 
-    def right_player_move_up(self):
+    def player_move_up(self):
+        """This method moves player up"""
         self.sety(self.ycor() + self.paddle_speed)
 
-    def right_player_move_down(self):
+    def player_move_down(self):
+        """This method moves player down."""
         self.sety(self.ycor() - self.paddle_speed)
 
     def computer_follow_ball(self, ball):
+        """This method assure that computer paddle will fallow ball in horizontal position."""
         if ball.ycor() > self.ycor():
             self.sety(self.ycor() + 10)
         else:

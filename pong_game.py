@@ -20,10 +20,10 @@ scoreboard = Scoreboard()
 obstacle = Obstacle()
 
 screen.listen()
-screen.onkey(right_player.right_player_move_up, "Up")
-screen.onkey(right_player.right_player_move_down, "Down")
-screen.onkey(computer.right_player_move_up, "w")
-screen.onkey(computer.right_player_move_down, "s")
+screen.onkey(right_player.player_move_up, "Up")
+screen.onkey(right_player.player_move_down, "Down")
+screen.onkey(computer.player_move_up, "w")
+screen.onkey(computer.player_move_down, "s")
 
 game_is_on = True
 
