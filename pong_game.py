@@ -34,6 +34,7 @@ while game_is_on:
     screen.update()
     sleep(ball.get_ball_speed())
     ball.move()
+    obstacle.move()
 
     # Ball is boucing from top and bottom wall.
     if ball.ycor() >= 260 or ball.ycor() <= -260:
