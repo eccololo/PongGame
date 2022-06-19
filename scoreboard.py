@@ -29,3 +29,13 @@ class Scoreboard(Turtle):
         self.write(self.r_score, align="center", font=("Verdana", 45, "normal"))
         self.goto(-150, 200)
         self.write(self.l_score, align="center", font=("Verdana", 45, "normal"))
+
+    def end_game(self):
+        if self.l_score >= 5:
+            self.clear()
+            self.goto(0, 0)
+            self.write("Game Over.\nComputer Wins!", align="center", font=("Verdana", 55, "normal"))
+        elif self.r_score >= 5:
+            self.clear()
+            self.goto(0, 0)
+            self.write("Game Over.\nYou Win!", align="center", font=("Verdana", 55, "normal"))

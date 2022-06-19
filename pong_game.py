@@ -34,6 +34,11 @@ while game_is_on:
     obstacle.move()
     computer.computer_follow_ball(ball)
 
+    if scoreboard.r_score >= 5 or scoreboard.l_score >= 5:
+        scoreboard.end_game()
+        sleep(5)
+        game_is_on = False
+
     # Ball is boucing from top and bottom wall.
     if ball.ycor() >= 260 or ball.ycor() <= -260:
         ball.bounce_y()
