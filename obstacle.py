@@ -11,8 +11,6 @@ class Obstacle(Turtle):
         self.shapesize(stretch_wid=2.4, stretch_len=1)
         self.penup()
         self.set_proper_position()
-        # self.x_position = random.randint(-90, 90)
-        # self.goto(self.x_position, -300)
         self.y_speed = 10
 
     def move(self):

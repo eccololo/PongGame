@@ -46,6 +46,11 @@ while game_is_on:
         ball.bounce_x()
         ball.increase_ball_speed()
 
+    # Ball is bouncing from obstacle when two collide
+    if (ball.distance(obstacle) <= 40 and ball.xcor() <= (obstacle.xcor() - 10)) \
+            or (ball.distance(obstacle) <= 40 and ball.xcor() >= (obstacle.xcor() + 10)):
+        ball.bounce_x()
+
     # When ball is passing right or left wall its starts over again from middle of the screen and
     # with opposite direction.
     if ball.xcor() <= -450:
