@@ -33,6 +33,7 @@ class Ball(Turtle):
 
     def reset_ball(self):
         self.goto(0, 0)
+        self.ball_speed = 0.1
         self.bounce_x()
         self.change_slightly_ball_angle()
 
