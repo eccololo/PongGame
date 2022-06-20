@@ -1,6 +1,3 @@
-# TODO:
-#    1. Make game end.
-
 from turtle import Screen
 from player import Player
 from ball import Ball
